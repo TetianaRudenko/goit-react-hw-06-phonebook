@@ -1,9 +1,19 @@
-import PropTypes from "prop-types";
 import { nanoid } from "nanoid";
 import {  Wrap, Label, Input } from "./ContactFilter.styled";
 
-const ContactFilter = ({ value, onChange }) => {
+import { useSelector, useDispatch } from "react-redux";
+import { getFilter } from "../redux/selectors";
+import { changeFilter } from "../redux/filterSlice";
+
+const ContactFilter = () => {
   const nameInputValue = nanoid();
+
+  const dispatch = useDispatch();
+  const filter = useSelector(getFilter);
+
+  const handleChangeFilter = e => {
+    dispatch(changeFilter(e.target.value));
+  }
 
   return (
     <Wrap>
@@ -13,16 +23,11 @@ const ContactFilter = ({ value, onChange }) => {
       <Input
         id={nameInputValue}
         type="text"
-        value={value}
-        onChange={onChange}
+        value={filter}
+        onChange={handleChangeFilter}
       />
     </Wrap>
   )
-}
-
-ContactFilter.propTypes = {
-  value: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
 }
 
 export { ContactFilter };

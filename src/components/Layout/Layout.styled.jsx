@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  gap: 24px;
-  padding: 16px;
+  gap: 24px; */
+  padding: ${props => props.theme.spacing(4)};
   
 `

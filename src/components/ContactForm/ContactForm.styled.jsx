@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Form, Field } from "formik";
 
 
-const ContactForm = styled(Form)`
+const FormStyled = styled(Form)`
   display: flex;
   flex-direction: column;
   gap: ${props => props.theme.spacing(2)};
@@ -59,4 +59,4 @@ const Button = styled.button`
   }
 `
 
-export { ContactForm, Label, Input, ErrorText, Button };
+export { FormStyled, Label, Input, ErrorText, Button };
