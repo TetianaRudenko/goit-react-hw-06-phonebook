@@ -4,8 +4,8 @@ import { Formik, ErrorMessage } from "formik";
 import * as yup from 'yup';
 
 import { useSelector, useDispatch } from "react-redux";
-import { getContacts } from "../redux/selectors";
-import { addContact } from "../redux/contactsSlice";
+import { getContacts } from "../../redux/selectors";
+import { addContact } from "../../redux/contactsSlice";
 
 import { FormStyled, Label, Input, Button, ErrorText } from "./ContactForm.styled";   
 

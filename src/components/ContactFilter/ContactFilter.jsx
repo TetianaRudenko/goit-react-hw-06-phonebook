@@ -2,8 +2,8 @@ import { nanoid } from "nanoid";
 import {  Wrap, Label, Input } from "./ContactFilter.styled";
 
 import { useSelector, useDispatch } from "react-redux";
-import { getFilter } from "../redux/selectors";
-import { changeFilter } from "../redux/filterSlice";
+import { getFilter } from "../../redux/selectors";
+import { changeFilter } from "../../redux/filterSlice";
 
 const ContactFilter = () => {
   const nameInputValue = nanoid();
